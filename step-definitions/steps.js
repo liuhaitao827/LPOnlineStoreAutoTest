@@ -1,40 +1,46 @@
-import { client } from 'nightwatch-api';
 import { Given, When, Then } from 'cucumber';
 
-Given(/^I open POPS`s Landing Page$/, async () => {
-  await client.url('http://ppnm7webp1/pops');
-});
-
-Then(/^the title is "(.*?)"$/, async text => {
-  await client.assert.title(text);
-});
-
-Given('I am a register user', (user) => {
+Given('I enter {string} of {string} online website on browser', (URL, merchant) => {
   // Write code here that turns the phrase above into concrete actions
 
 });
 
-When('{string} menu is higlight', (menuname) => {
+Then('I open {string} online home page', (merchant) => {
+  // Write code here that turns the phrase above into concrete actions
+
+});
+
+When('I choose category from top menu', (topmenu) => {
   // Write code here that turns the phrase above into concrete actions
 
 });
          
-When('Register user name is shown in {string} list', (workflowuser) => {
+When('Navigate to category page', () => {
   // Write code here that turns the phrase above into concrete actions
 
 });
 
-Then('I login system successfully', () => {
+Then('I open global search box', () => {
   // Write code here that turns the phrase above into concrete actions
 
 });
 
-When('Workflow User list is null', () => {
+When('I enter keywords to search', (keywords) => {
   // Write code here that turns the phrase above into concrete actions
 
 });
 
-Then('I login system failed', () => {
+Then('Navigate to search result page', () => {
+  // Write code here that turns the phrase above into concrete actions
+
+});
+
+Then('I can see the number of search products', () => {
+  // Write code here that turns the phrase above into concrete actions
+
+});
+
+Then('I can see all search products', () => {
   // Write code here that turns the phrase above into concrete actions
 
 });

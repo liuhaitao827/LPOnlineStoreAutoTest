@@ -1,24 +1,25 @@
-Feature: Landing Page
+Feature: Visit Merchant Online Website
 
-Scenario: Visit Landing Page
+Scenario: Visit Home Page
 
-  Given I open POPS`s Landing Page
-  Then the title is "POPS"
+  Given I enter "URL" of "merchant" online website on browser
+  Then I open "merchant" online home page
 
-Scenario: Login Success
-  Given I am a register user
-  | User Name | Role |
-  | Allan Chen | Administrator |
-  And I open POPS`s Landing Page
-  When "My Active Work" menu is higlight
-  And Register user name is shown in "Workflow User" list
-  Then I login system successfully
-   
-Scenario: Login Failed
-  Given I am a register user
-  | User Name | Role |
-  | Allan Chen | Administrator |
-  And I open POPS`s Landing Page
-  When Workflow User list is null
-  Then I login system failed
+Scenario: Visit Category Page
 
+  Given I open "merchant" online home page
+  When I choose category from top menu
+  | top menu |
+  | Creative Prints |  
+  Then Navigate to category page
+
+Scenario: Global Search
+
+  Given I open "merchant" online home page
+  When I open global search box
+  And I enter keywords to search
+  | keywords |
+  | Christmas |  
+  Then Navigate to search result page
+  And I can see the number of search products
+  And I can see all search products
